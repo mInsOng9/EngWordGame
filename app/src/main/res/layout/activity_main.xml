@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:paddingTop="8dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/app_background"
+    >
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/10"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/font_leeseoyun"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:id="@+id/iv_qpic"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@drawable/car"
+        android:layout_below="@+id/tv_count"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:layout_margin="4dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/tv_qtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_qpic"
+        android:text="CAR"
+        android:visibility="invisible"
+        android:textColor="@color/black"
+        android:layout_centerInParent="true"
+        android:textSize="60sp"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/font_leeseoyun"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="GOOD"
+        android:layout_below="@+id/tv_qtext"
+        android:visibility="invisible"
+        android:textSize="60sp"
+        android:fontFamily="@font/font_leeseoyun"
+        android:textStyle="bold"
+        android:layout_margin="4dp"
+
+        />
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="START"
+        android:textSize="40sp"
+        android:padding="16dp"
+        android:backgroundTint="@color/black"
+        android:layout_below="@+id/tv_qtext"
+        android:visibility="visible"
+        android:fontFamily="@font/font_leeseoyun"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+
+        />
+
+    <GridLayout
+        android:id="@+id/ans"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:columnCount="2"
+        android:layout_below="@+id/btn_next"
+        android:layout_margin="4dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_ans1"
+            android:background="@drawable/bg"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/font_leeseoyun"/>
+
+        <TextView
+            android:id="@+id/tv_ans2"
+            android:background="@drawable/bg"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:fontFamily="@font/font_leeseoyun"/>
+
+        <TextView
+            android:id="@+id/tv_ans3"
+            android:gravity="center"
+            android:background="@drawable/bg"
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:fontFamily="@font/font_leeseoyun"/>
+
+        <TextView
+            android:id="@+id/tv_ans4"
+            android:background="@drawable/bg"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:layout_rowWeight="1"
+            android:fontFamily="@font/font_leeseoyun"/>
+
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:padding="30dp"
+        android:layout_margin="30dp"
+        android:visibility="invisible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR SCORE"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/font_leeseoyun"/>
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00"
+            android:textStyle="bold"
+            android:textSize="90sp"
+            android:fontFamily="@font/font_leeseoyun"/>
+        <Button
+            android:id="@+id/btn_restart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="RESTART"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/font_leeseoyun"
+            android:textSize="30sp"
+            android:padding="16dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
